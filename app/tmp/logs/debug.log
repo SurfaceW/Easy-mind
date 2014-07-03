@@ -1,0 +1,143 @@
+2014-03-20 21:46:02 Debug: Notice (8): Undefined variable: result in [E:\Dropbox\Me\ktrees\app\View\users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-20 21:46:04 Debug: Notice (8): Undefined variable: result in [E:\Dropbox\Me\ktrees\app\View\users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-30 22:00:09 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-30 22:00:11 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-30 22:00:13 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-30 22:00:14 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-30 22:00:28 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\users\log_in.ctp, line 12]
+Trace:
+include - APP\View\users\log_in.ctp, line 12
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-30 22:01:04 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\users\log_in.ctp, line 12]
+Trace:
+include - APP\View\users\log_in.ctp, line 12
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-03-31 19:45:11 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\Users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\Users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-04-01 23:04:07 Debug: Notice (8): Undefined variable: result in [F:\Alan Doc\Dropbox\Me\ktrees\app\View\Users\sign_up.ctp, line 9]
+Trace:
+include - APP\View\Users\sign_up.ctp, line 9
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-04-28 16:36:39 Notice: Notice (8): Undefined variable: result in [/var/www/Easy-mind/app/View/Users/sign_up.ctp, line 10]
+Trace:
+include - APP/View/Users/sign_up.ctp, line 10
+View::_evaluate() - CORE/Cake/View/View.php, line 935
+View::_render() - CORE/Cake/View/View.php, line 897
+View::render() - CORE/Cake/View/View.php, line 466
+Controller::render() - CORE/Cake/Controller/Controller.php, line 952
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-28 16:36:41 Notice: Notice (8): Undefined variable: result in [/var/www/Easy-mind/app/View/Users/sign_up.ctp, line 10]
+Trace:
+include - APP/View/Users/sign_up.ctp, line 10
+View::_evaluate() - CORE/Cake/View/View.php, line 935
+View::_render() - CORE/Cake/View/View.php, line 897
+View::render() - CORE/Cake/View/View.php, line 466
+Controller::render() - CORE/Cake/Controller/Controller.php, line 952
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-28 16:36:43 Notice: Notice (8): Undefined variable: result in [/var/www/Easy-mind/app/View/Users/sign_up.ctp, line 10]
+Trace:
+include - APP/View/Users/sign_up.ctp, line 10
+View::_evaluate() - CORE/Cake/View/View.php, line 935
+View::_render() - CORE/Cake/View/View.php, line 897
+View::render() - CORE/Cake/View/View.php, line 466
+Controller::render() - CORE/Cake/Controller/Controller.php, line 952
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+

@@ -1,0 +1,22 @@
+@charset "utf-8";
+.container{
+    position: absolute;
+}
+#welcome_container {
+    display: none;
+    z-index:3;
+}
+
+
+#cgraph_container{
+    z-index:2;
+}
+
+#kgraph_container{
+    z-index:1;
+}
+
+#icon_layer,
+#menu_main{
+    display: none;
+}

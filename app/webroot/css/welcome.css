@@ -1,0 +1,249 @@
+@charset "utf-8";
+#canvas_whole {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -9999;
+}
+#logo,
+#learn_more {
+  background-image: url("../img/sprite.png");
+}
+#welcome_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #808080;
+  overflow: hidden;
+  display: none;
+}
+#welcome_container #welcome_header {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+#welcome_container #welcome_header #logo {
+  width: 360px;
+  height: 100px;
+  background-position: 0 -100px;
+  margin: 0 auto;
+}
+#welcome_container #welcome_header span {
+  padding-top: 0px;
+  font-size: 20px;
+}
+#welcome_container hr {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+#welcome_container #welcome_body {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  /*overflow: hidden;*/
+  background-color: rgba(0, 104, 55, 0.05);
+}
+#welcome_container #welcome_body #welcome_intro {
+  position: absolute;
+  width: 60%;
+  display: none;
+  top: 0;
+  height: 350px;
+  background-color: rgba(0, 104, 55, 0.1);
+}
+#welcome_container #welcome_body #welcome_main {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  left: 0;
+}
+#welcome_container #welcome_body #welcome_main .frame {
+  background-color: #ffffff;
+  z-index: 9999;
+  width: 360px;
+  margin: 0 auto;
+}
+#welcome_container #welcome_body #welcome_main #login {
+  height: 230px;
+  margin-top: 50px;
+}
+#welcome_container #welcome_body #welcome_main #login #login_header {
+  height: 50px;
+  text-align: center;
+}
+#welcome_container #welcome_body #welcome_main #login #login_header span {
+  position: relative;
+  top: 15px;
+  font-size: 21px;
+  color: #22b573;
+}
+#welcome_container #welcome_body #welcome_main #login #login_email {
+  top: 10px;
+}
+#welcome_container #welcome_body #welcome_main #login #login_email #remember {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  top: 10px;
+  background-position: -120px -30px;
+}
+#welcome_container #welcome_body #welcome_main #login #login_password {
+  top: 25px;
+}
+#welcome_container #welcome_body #welcome_main #login #login_button {
+  z-index: 10;
+  left: 296px;
+  top: -11px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-position: -120px 0;
+}
+#welcome_container #welcome_body #welcome_main #login #login_footer {
+  margin-top: 15px;
+  margin-left: 30px;
+  text-align: left;
+  font-size: 12px;
+}
+#welcome_container #welcome_body #welcome_main #login #login_footer #login_help {
+  color: darkred;
+  display: none;
+}
+#welcome_container #welcome_body #welcome_main #signUp {
+  display: none;
+  height: 230px;
+  margin-top: 50px;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_header {
+  height: 50px;
+  text-align: center;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_header span {
+  position: relative;
+  top: 15px;
+  font-size: 21px;
+  color: #22b573;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_body {
+  position: relative;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_body #signUp_email {
+  top: 10px;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_body #signUp_password {
+  top: 25px;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_body #signUp_button {
+  position: relative;
+  top: -11px;
+  left: 296px;
+  z-index: 11;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-position: -120px 0;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_footer {
+  margin-left: 30px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+#welcome_container #welcome_body #welcome_main #signUp #signUp_footer .input_help {
+  display: none;
+}
+#welcome_container #welcome_body #welcome_main #forgot {
+  display: none;
+  height: 200px;
+  margin-top: 50px;
+}
+#welcome_container #welcome_body #welcome_main #forgot #forgot_header {
+  height: 50px;
+  text-align: center;
+}
+#welcome_container #welcome_body #welcome_main #forgot #forgot_header span {
+  position: relative;
+  top: 15px;
+  font-size: 21px;
+  color: #22b573;
+}
+#welcome_container #welcome_body #welcome_main #forgot #forgot_body #forgot_email {
+  top: 15px;
+}
+#welcome_container #welcome_body #welcome_main #forgot #forgot_body #forgot_send {
+  position: relative;
+  top: -21px;
+  left: 295px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-position: -120px 0;
+}
+#welcome_container #welcome_body #welcome_main #forgot #forgot_footer {
+  margin-left: 30px;
+  margin-top: 25px;
+  font-size: 12px;
+}
+#welcome_container #welcome_footer {
+  margin-top: 360px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+#welcome_container #welcome_footer #learn_more {
+  width: 360px;
+  height: 100px;
+  margin: 0 auto;
+  background-position: 0 0;
+}
+#welcome_container #welcome_footer #learn_more:hover {
+  cursor: pointer;
+}
+/*welcome各模块总体设置
+=================================================*/
+.frame input {
+  outline: none;
+  border: none;
+  height: 38px;
+  width: 250px;
+  font-size: 16px;
+  position: relative;
+  left: 48px;
+  color: #808080;
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft Yahei';
+}
+.input_img_add {
+  z-index: 10;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 5px;
+  top: 5px;
+}
+.input_img_email {
+  background-position: 0 -60px;
+}
+.input_img_password {
+  background-position: -30px -60px;
+}
+.email,
+.password {
+  z-index: 9;
+  position: relative;
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  color: #275b50;
+  left: 30px;
+}
+/*login的配置
+=================================================*/
+/*signUp的配置
+=================================================*/
+/*forgot的配置
+=================================================*/
+/*intro的配置
+=================================================*/

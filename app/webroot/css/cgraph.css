@@ -1,0 +1,59 @@
+@charset "UTF-8";
+#add_cgraph {
+  position: absolute;
+  display: none;
+}
+#cgraph_modal {
+  display: none;
+  position: absolute;
+  width: 330px;
+  height: 200px;
+  color: #4AA994;
+}
+#cgraph_modal hr {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.modal_header {
+  height: 30px;
+  text-align: center;
+}
+.modal_header span {
+  height: 30px;
+  line-height: 30px;
+}
+#cgraph_name_group {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+#cgraph_tag_group {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+#cgraph_name {
+  border: solid 1px #bae0d1;
+  outline: none;
+  height: 25px;
+  width: 200px;
+  color: #275b50;
+  font-family: 'Microsoft Yahei';
+  margin-left: 10px;
+}
+#cgraph_tag {
+  margin-left: 50px;
+  margin-top: -20px;
+}
+.button_middle {
+  position: absolute;
+  background: #bae0d1;
+  outline: none;
+  border: none;
+}
+.button_success {
+  bottom: 20px;
+  left: 40px;
+}
+.button_warning {
+  bottom: 20px;
+  right: 40px;
+}

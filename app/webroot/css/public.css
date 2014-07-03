@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/* 样式清零 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+    list-style: none;
+}
+a {
+    -webkit-transition : 300ms ease all;
+    -moz-transition : 0.3s ease all;
+}
+
+/* 去掉链接的默认效果 */
+a:link {
+    text-decoration: none;
+    color: #000000;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #4AA994;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #4AA994;
+    cursor: pointer;
+}
+
+a:active {
+    text-decoration: none;
+    color: #275b50;
+}
+
+/* 整体页面的样式 */
+html, body {
+    background: #FFFFFF;
+    font-family: "Microsoft YaHei", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: #c0c8c9;
+
+    background-image: linear-gradient(0deg, #fff, #c0c8c9, #fff);
+    background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+    background-image: -moz-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+
+}
+
+.border {
+    border: solid #bae0d1 5px;
+}
+
+.border_right {
+    border: solid #bae0d1;
+    border-width: 0 5px 0 0;
+}
+
+.border_tight {
+    border: solid 1px #bae0d1;
+}
+
+.focus {
+    cursor: pointer;
+}
+
+.fix {
+    position: fixed;
+}
+
+/* 字体 #22b573 */
+.font_black {
+    color: #000000;
+}
+
+.font_white {
+    color: #ffffff;
+}
+
+.font_green {
+    color: #275b50;
+}
+
+.font_16 {
+    font-size: 16px;
+}
+
+.font_14 {
+    font-size: 14px;
+}
+
+.font_12 {
+    font-size: 12px;
+}
+
+.font_10 {
+    font-size: 10px;
+}
+
+.font_center {
+    text-align: center;
+}
+
+.font_left {
+    text-align: left;
+}
+
+.font_right {
+    text-align: right;
+}
+
+/* modal */
+.modal {
+    background-color: rgba(255,255,255, 0.94);
+    font-family: 'Microsoft Yahei';
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.modal_large {
+    width: 720px;
+    height: 445px; /*保持黄金比例*/
+}
+
+.modal_middle {
+    width: 400px;
+    height: 240px;
+}
+
+.modal_small {
+    width: 200px;
+    height: 120px;
+}
+
+.modal_header {
+    cursor: move;
+}
+
+.modal_body {
+
+}
+
+.modal_close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    background-position: 0 -30px;
+    cursor: pointer;
+}
+
+/* input */
+.input_text {
+    width: 250px;
+    height: 30px;
+    outline: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.input_range {
+}
+
+.input_checkbox {
+    vertical-align: text-bottom;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.input_submit {
+    width: 80px;
+    height: 36px;
+    border: solid 1px #bae0d1;
+}
+
+.input_help {
+    font-size: 10px;
+    display: block;
+    text-align: right;
+}
+
+/* button */
+.button {
+}
+
+.button_large {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #009245;
+    background-color: #c9e8d7;
+    cursor: pointer;
+}
+
+.button_middle {
+    width: 100px;
+    height: 34px;
+    position: absolute;
+    background: #bae0d1;
+    outline: none;
+    border: none;
+}
+
+.button_small {
+    width: 50px;
+    height: 16px;
+}
+
+/* icon */
+.icon {
+}
+
+.icon_large {
+    width: 50px;
+    height: 50px;
+}
+
+.icon_middle,
+.icon_middle img {
+    width: 40px;
+    height: 40px;
+}
+
+.icon_small {
+    width: 25px;
+    height: 25px;
+}
+
+/* list */

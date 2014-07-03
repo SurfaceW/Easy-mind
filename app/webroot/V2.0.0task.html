@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>V2.0.0任务清单</title>
+    <script src="js/fr/jquery-2.0.3.min.js"></script>
+    <link href="css/task.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>主要任务</h1>
+</header>
+<article>
+    <section class="idea-pool">
+        <h2>Idea Pool</h2>
+        <ul>
+            <li>用Full-Screen的方式显示菜单栏之中的Model</li>
+        </ul>
+    </section>
+    <section class="task-pool">
+        <h2>Task Pool</h2>
+        <h3>视觉 | 原型</h3>
+        <ul>
+            <li>focusNode高亮 | 加20%alpha</li>
+        </ul>
+        <h3>业务 | 逻辑</h3>
+        <ul>
+            <li>实现放大和缩小组件</li>
+
+            <li>取缔ActionSequence的概念，改由Collection本地实现</li>
+        </ul>
+        <h3>性能 | 优化</h3>
+        <ul>
+            <li>在绘制的时候执行元素是否在当前窗口中的判断</li>
+            <li>利用方法保护数据隐私</li>
+
+        </ul>
+    </section>
+    <section class="bug-pool">
+        <h2>Bugs Pool</h2>
+        <ul>
+            <li>hover延迟或点击延迟时，鼠标指针总是变为pointer</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月23日</time>
+        <ul class="task">
+            <li class="nn fin">解决CGraph Hover范围问题</li>
+            <li class="nn fin">禁用FreeGraph之中Hover菜单之中的左下角、右下角功能区</li>
+            <li class="nn fin">实现节点hover左右小icon</li>
+            <li class="nn fin">解决Canvas绘制视图中，因为流布局而被挤压到下面，显示的时候有弹跳显示的Bug</li>
+            <li class="nn fin">LocalStorage的Bug修复，能够正常使用</li>
+            <li class="nn fin">延迟执行动画效果的绑定</li>
+
+            <li class="fin">fin postAS中判别机制的bug</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月20日 - 2014年05月22日</time>
+        <ul class="task">
+            <li class="fin">审查全部代码中的zoomLevel是否出现在错误位置</li>
+            <li class="fin">双击进入新建主图的时候  显示的根节点名字也该是相应的名字</li>
+            <li class="fin">freeGraph中应不允许修改根节点属性</li>
+            <li class="fin">双击回来的时候 + 不见了</li>
+            <li class="ng">freeGraph各种操作与后端接轨，实现数据联通</li>
+            <li class="fin">把menuView并入windowView</li>
+            <li class="fin">去掉actionSequenceCollection,并入Collection</li>
+            <li class="fin">localStorge不再闪烁</li>
+            <li class="fin">CGraph 和 FreeNodeGraph 的衔接</li>
+            <li class="fin">FreeNodeGraph的功能稳定和各种测试</li>
+            <li class="fin">FreeNodeGraph 返回按钮功能的实现</li>
+            <li class="fin">后退ICON，标齐</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月17日</time>
+        <ul class="task">
+            <li class="ng">cGraph各种操作与后端接轨，实现数据联通</li>
+            <li class="ng">logout功能的实现</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月16日</time>
+        <ul class="task">
+            <li class="nn fin">UI | 在Window缩小的时候，字体会变小</li>
+            <li class="nn fin">主图删除按钮功能失效</li>
+            <li>主图和自由图之中保存按钮的实现</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月16日</time>
+        <ul class="task">
+            <li class="gg fin">标签 | 去除标签组件</li>
+            <li class="gg fin">优化 | Sprites 图像功能的实现</li>
+            <li class="gg fin">优化 | 规整所有的URL</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月15日</time>
+        <ul class="task">
+            <li class="nn ckd">Models | Collections 的代码重构</li>
+            <li class="nn ckd">FreeNodeCollection 子类的实现</li>
+            <li class="nn ckd">实现为了兼容多个视图/缓存的Collection结构</li>
+            <li class="nn ckd">解除Collection之中嵌套Model的方法，只需要继承于相关的Model的工具原型链即可</li>
+            <li class="nn ckd">实现负责数据交换的Action Sequence功能类于主视图 | 自由图之中</li>
+            <li class="gg ckd">Views 的代码重构</li>
+            <li class="gg ckd">windowModel,windowView,windowCollector被引用时不要简写为window为妙</li>
+            <li class="gg ckd">Selection 功能在拖拽模态框的时候需要禁用</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月14日</time>
+        <ul class="task">
+            <li class="nn ckd">Less的引用</li>
+            <li class="nn ckd">windowView中状态机放入windowController</li>
+            <li class="nn ckd">Collection和Model中的ajaxSend/ajaxGet复用</li>
+            <li class="gg ckd">User 模态框的原型实现，将原型实现为对应DOM样式</li>
+            <li class="gg ckd">测通css sprite</li>
+            <li class="gg ckd">hr的线性美化</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月13日</time>
+        <ul class="task">
+            <li class="ng ckd">整个主图 | 子视图的数据表现形式，与后端商量并达成一致</li>
+            <li class="ng ckd">整理并规范子类的职能，在功能上开发者达成一致</li>
+        </ul>
+    </section>
+    <div class="mine-stone">
+    <section>
+        <time>2014年05月08日</time>
+        <ul class="task">
+            <li class="nn fin">draggable向百度login看齐 | 高质量化 |  边界判定</li>
+            <li class="nn fin">将css动画的class加入domString再加以引用</li>
+            <li class="nn">Draggable的边框检测问题</li>
+
+            <li class="ng">cGraph 保存机制的实现</li>
+            <li class="ng">cGraph 单击范围</li>
+            <li class="ng">cGraph 右键后节点的位移bug</li>
+
+            <li class="nn">进入子视图时节点上的loading动画</li>
+            <li class="gg">menu click 旋转90度并变为x</li>
+            <li class="gg fin">user_modal初始化居中</li>
+        </ul>
+        <ul class="bug">
+
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月07日</time>
+        <ul>
+            <li class="gg fin">解决掉hover后cGraph过大的问题</li>
+            <li class="gg fin">cGraph感应区过大 | 如何更好防止+字符串链接  备选：parseInt(  ,10)|Number( )√|'' </li>
+            <li class="gg fin">||能否从getOne时就保证取得一个数值  ajax拉取时特意转换为Number</li>
+            <li class="gg fin">icon_close变小</li>
+            <li class="nn fin">Animation - Circle 复用性设计/凡是涉及类似结构的，都可以考虑复用性的设计</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月06日</time>
+        <ul>
+            <li>满课，看书学习进步= =</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月05日</time>
+        <ul>
+            <li class="gg fin">welcome hint</li>
+            <li class="gg fin">GG 菜单UI重构</li>
+            <li class="gg">zoom</li>
+
+            <li class="ng">CGraph 节点添加删除操作ajax接口对接</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月04日</time>
+        <ul>
+            <li class="nn fin">登录动画的CSS Animation载入</li>
+            <li class="nn fin">整个加载的PreLoad | 结合LocalStorage技术实现自动登录</li>
+            <li class="nn fin">BugFix | + 不见了</li>
+            <li class="gg fin">H1 所引发的粗体问题</li>
+            <li class="gg fin">CGraph Modal 点空白区域不消失，点×消失</li>
+            <li class="gg fin">CGraph 初始化拉取节点数据接口对接</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年05月01日 ~ 2014年05月03日</time>
+        <ul>
+            <li>休息三天</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月30日</time>
+        <ul>
+            <li class="gg"></li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月29日</time>
+        <ul>
+            <li class="nn">测试 | 基本功能测试通过</li>
+            <li class="gg">Debug | welcome login回车</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月28日</time>
+        <ul>
+            <li class="ng fin">UI Prototype | 表单样式重置</li>
+            <li class="ng fin">UI Prototype | 自由图样式重置</li>
+            <li class="nn fin">主页的UI重置</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月27日</time>
+        <ul>
+            <li class="nn fin">UI Prototype | 登录界面组件</li>
+            <li class="nn fin">UI Prototype | 登录界面背景</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月26日</time>
+        <ul>
+            <li class="nn fin">摆正了对ktree的态度</li>
+            <li class="nn fin">单击事件和双击事件未被隔离</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月25日</time>
+        <ul>
+            <li class="gg">将grunt移植到父级目录</li>
+            <li class="gg">modal拖拽时速度不及指针速度</li>
+            <li class="gg">模态框切换的时候CSS3 Animation</li>
+            <li class="nn fin">BUG - FreeGraph返回按钮失效</li>
+            <li class="gg fin">Grunt三个工具组件的激活：jsLint, uglify, LESS</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月24日</time>
+        <ul>
+            <li class="gg fin">登录按钮侦听回车键</li>
+            <li class="gg fin">注册/登陆/忘记密码的Hint</li>
+            <li class="gg fin">忘记密码补充按钮</li>
+            <li class="gg fin">实现cgraph放缩</li>
+            <li class="gg">menu变色</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月23日</time>
+        <ul>
+            <li class="nn fin">UI Prototype | 按钮切换</li>
+            <li class="gg fin">禁用Selection</li>
+            <li class="gg fin">Modal的Drag在Header区响应</li>
+            <li class="gg fin">Modal Drag每次恢复时候不居中，并且进行位置检测（）初始化只进行一次</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年4月22日</time>
+        <ul>
+            <li class="nn fin">UI prototype | 主视图界面</li>
+            <li>CGraph | Modal名字修改为空后添加默认value</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月21日</time>
+        <ul>
+            <li class="nn fin">规范化文档的结构的命定</li>
+            <li class="ng fin">KTree UI 敲定，我们建立起绝对规范的UI文档</li>
+        </ul>
+    </section>
+    <section>
+        <time>2014年04月20日</time>
+        <div class="task">
+            <ul>
+                <li class="nn fin">Bug Fix:解决一个非常严重的BUG：事件重复绑定</li>
+                <li class="nn fin">功能实现：实现主视图和自由视图之间的切换</li>
+                <li class="nn fin">功能完善：递归子节点移动</li>
+                <li class="nn fin">FreeGraph的观览模式设计思想完毕</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月19日</time>
+        <div class="task">
+            <ul>
+                <li class="gg">node modify属性框</li>
+                <li class="nn fin">FreeGraph的节点hover：添加</li>
+                <li class="nn fin">FreeGraph的节点hover：删除</li>
+                <li class="nn fin">FreeGraph的节点hover：新建子视图（仅作为接口）</li>
+                <li class="nn fin">FreeGraph的节点hover：转向子视图（仅作为接口）</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月18日</time>
+        <div class="task">
+            <ul>
+                <li class="gg fin">使用less替换css</li>
+                <li class="gg fin">使用Grunt</li>
+                <li class="gg fin">恢复menu的运作</li>
+                <li class="gg rd">drag modals</li>
+                <li class="ng">配色和等级系统</li>
+                <li class="nn fin">Hover的效果和事件流</li>
+            </ul>
+            <ul class="bugs">
+                <li class="fin">新建MainNode时不允许多次创建</li>
+                <li class="fin">Drag停止以后继续绑定单击事件</li>
+                <li class="fin">单击延迟和fadeIn延迟造成的鼠标移速过快bug</li>
+                <li class="fin">Node拖拽时延迟过高</li>
+                <li class="rd">FreeGraph界面，节点拖动过快鼠标移出节点范围则currentNode == null</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月17日</time>
+        <div class="task">
+            <ul>
+                <li class="gg fin">modal UI完善 加底色</li>
+                <li class="gg fin">单击MainGraph弹出modal的事件</li>
+                <li class="gg fin">Menu菜单启动</li>
+                <li class="gg fin">完善登陆/选择树/ICON事件流</li>
+                <li class="gg fin">modal中数据的Load/Write</li>
+
+                <li class="nn fin">Menu User的Prototype</li>
+                <li class="nn fin">实现双击进入的事件流</li>
+                <li class="nn fin">尽可能复现FreeGraph的功能组件</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月16日</time>
+        <div class="task">
+            <ul>
+                <li class="nn fin">Window Resize事件流（DOM兼容、Canvas兼容）</li>
+                <li class="nn fin">Circle的配色和感应的事件</li>
+                <li class="nn fin">Drag Window事件</li>
+                <li class="nn fin">Hover Element事件</li>
+                <li class="nn fin">Drag Element事件</li>
+                <li class="nn fin">单击 Element事件</li>
+                <li class="nn fin">双击 Element事件</li>
+                <li class="nn fin">*美化这个Task表</li>
+                <li class="gg fin">ICON登录和Choose界面去掉ICON与MENU</li>
+                <li class="gg fin">PLUS Button Hover 和背景图片</li>
+                <li class="gg fin">点击事件后渲染的编辑框（名称、标签、删除按钮）+ Handler</li>
+                <li class="gg fin">SEARCH ICON右上角实现</li>
+                <li class="gg fin">放置一个LOGO上去，登录页面和CGraph同行</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月15日</time>
+        <div class="task">
+            <ul>
+                <li class="nn fin">设计选择图的视觉表达方式并实现基本的结构框架</li>
+                <li class="nn fin">融合基本的代码，并带动登录/注册的事件流</li>
+                <li class="nn fin">设计融合选择图界面和主要登录界面的方法</li>
+                <li class="nn fin">设计选择图的视觉表达方式并实现基本的结构框架</li>
+                <li class="nn fin">实现多元素动画的表现</li>
+                <li class="gg fin">重新维护登录和注册以及忘记密码界面的CSS流（恢复之前的效果和定义）</li>
+                <li class="gg fin">View层加入方法：setLocation并为welcome添加初始位置属性</li>
+                <li class="gg fin">登陆界面加入引到注册账户的链接，并完善跳转事件</li>
+                <li class="gg fin">为ktree.html加入注释，增强可读性</li>
+                <li class="gg fin">优化login、signUp、forgot三部分的dom结构及简化css</li>
+                <li class="gg fin">再次完善welcome事件流</li>
+                <li class="gg fin">将js控制的样式从DOM中去除，加入到CSS中</li>
+            </ul>
+            <ul class="problems">
+                <li class="fin">view中的delegation及undelegation并没有用到</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月14日</time>
+        <div class="task">
+            <ul>
+                <li class="nn fin ckd">整理并解决之前所遇到的Bugs 7-8个</li>
+                <li class="nn fin ckd">将signUp和login模块整合到welcome模块之中</li>
+                <li class="nn fin ckd">完善和登录和注册的HTML5化</li>
+                <li class="nn fin ckd">融合基本的代码，并带动登录/注册的事件流</li>
+                <li class="nn fin ckd">设计融合选择图界面和主要登录界面的方法</li>
+                <li class="nn fin ckd">简易UI动画制作</li>
+                <li class="gg fin ckd">CSS class名以及id的重定义:语义化，以‘_’为间隔</li>
+                <li class="gg fin ckd">全局规范化对id的操作</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月13日</time>
+        <div class="task">
+            <ul>
+                <li class="nn">将utils.window整合到view.window之中</li>
+                <li class="gg">继续整合Login层和SignUp层</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月12日</time>
+        <div class="task">
+            <ul>
+                <li class="gg fin ckd">dot vector整合到math里面</li>
+                <li class="gg fin ckd">整合View的功能函数，实现三个View的实例</li>
+                <li class="gg fin ckd">实现View的Canvas实例</li>
+                <li class="nn fin">实现Model的全局实例</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月11日</time>
+        <div class="task">
+            <ul>
+                <li class="gg">extend函数初步搭设，两天内完成extend</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月10日</time>
+        <div class="task">
+            <ul>
+
+            </ul>
+        </div>
+    </section>
+    <section>
+        <time>2014年04月09日</time>
+        <div class="task">
+            <ul>
+                <li>确定版本号2.0.0</li>
+                <li class="ng ckd">建立整套的KTree的需求Map（版本号2.0.0的所有功能）并拟定任务完成时间 3+2</li>
+                <li class="ng fin">Prototype效果的确定，并给汝腾、王麒展示评定</li>
+                <li class="nn ckd">代码整体的架构和文件体系的建立</li>
+                <li class="nn ckd">Prototype主页的设计，给定原型稿</li>
+                <li class="gg"></li>
+            </ul>
+        </div>
+    </section>
+    </div>
+</article>
+<footer>
+    TEAM_4 FE Developer
+</footer>
+</body>
+</html>

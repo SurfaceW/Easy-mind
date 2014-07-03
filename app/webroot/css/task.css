@@ -1,0 +1,58 @@
+@charset "UTF-8";
+header {
+    font-family: 'Microsoft YaHei', serif;
+}
+
+li {
+    list-style: circle;
+}
+
+article {
+    margin: 0 auto;
+    width: 960px;
+}
+
+section {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px #000000 solid;
+    box-shadow: 1px 1px 1px;
+}
+
+h1 {
+    font-size: 51px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #000000;
+}
+
+time {
+    font-size: 21px;
+    font-weight: 100;
+}
+
+footer {
+    font-size: 13px;
+    text-align: center;
+}
+
+.nn {
+}
+
+.gg {
+
+}
+
+.ng {
+
+}
+
+.ckd {
+    list-style: square;
+}
+
+.fin {
+    list-style: disc;
+}
+
