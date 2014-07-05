@@ -1,5 +1,8 @@
 /**
- * Created by surfacew on 14-4-10.
+ * WindowModel实例
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 (function () {
     "use strict";

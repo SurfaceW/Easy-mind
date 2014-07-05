@@ -1,8 +1,8 @@
 /**
- * @instance canvasView
- * @version 1.0
- * @time 2014-05-23 10:26:32
- * @author TEAM_4
+ * Canvas的View实例
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 (function () {
     "use strict";
@@ -13,14 +13,38 @@
 
         tool = KT.utils.tool,
 
+        /**
+         * Canvas视图
+         * + 注意：这个是View的扩展实例
+         *
+         * @class KT.view.canvas
+         * @extends KT.View
+         * @module KT.view
+         * @uses KT.utils.tool
+         * @uses KT.config.id
+         * @uses KT.config.nodeArgs
+         * @uses KT.model.window
+         * @since 1.0
+         */
         canvasView = new KT.View();
 
     //Canvas视图属性
     tool.defaults(canvasView, {
-        //保存canvas画布的DOM元素
+        /**
+         * 保存Canvas画布中的DOM元素
+         *
+         * @property canvas
+         * @type {Object} | jQueryObject
+         */
         canvas : null,
 
-        //保存canvas的上下文
+        /**
+         * 保存Canvas画布中的上下文
+         * <p>由函数getContext('2d')返回</p>
+         *
+         * @property userName
+         * @type {Object}
+         */
         context : null
 
     });
@@ -29,8 +53,12 @@
     tool.extend(canvasView, {
         /**
          * 动画圆形绘制
+         *
+         * @method animateCircle
          * @param {Object} o
+         * @example
          */
+        //@todo 这个需要等到以后确定之后进行详细的Example书写
         animateCircle: function (o) {
             var wc = KT.controller.window,
                 i,
@@ -122,6 +150,8 @@
 
         /**
          * 清除画布内的全部内容
+         *
+         * @method clearCanvas
          */
         clearCanvas: function () {
             this.context.clearRect(0, 0, this.getCanvasWidth(), this.getCanvasHeight());
@@ -129,7 +159,8 @@
 
         /**
          * 初始化canvas和context对象
-         * @private
+         *
+         * @method getHandler
          */
         getHandler : function () {
             this.canvas = $(ID.CANVAS_MAIN);
@@ -138,8 +169,9 @@
 
         /**
          * 获得canvas画布的宽度
+         *
+         * @method getCanvasWidth
          * @returns Number
-         * @private
          */
         getCanvasWidth : function () {
             if (!this.canvas) {
@@ -150,8 +182,9 @@
 
         /**
          * 获得canvas画布的高度
+         *
+         * @method getCanvasHeight
          * @returns Number
-         * @private
          */
         getCanvasHeight : function () {
             if (!this.canvas) {
@@ -162,6 +195,8 @@
 
         /**
          * 初始化Canvas运行环境
+         *
+         * @method iniCanvasHandler
          */
         iniCanvasHandler : function () {
             this.getHandler();
@@ -169,15 +204,16 @@
         },
 
         /**
-         * @method canvasHandler.fillCircle
          * 填充一个圆形
-         * @param o 对象化的参数
+         *
+         * @method fillCircle
+         * @param {Object} o 对象化的参数
+         * @example
          * {
          * String fillStyle
          * Dot center
          * Number radius
          * }
-         * @example test
          */
         fillCircle : function (o) {
             this.context.fillStyle = o.fillStyle;
@@ -195,17 +231,20 @@
 
         /**
          * 绘制四个方向的圆环片段
-         * @param o
+         *
+         * @method fillArcCircle
+         * @param {Object} o 对象化参数
+         * @example
          * o = {
-            fillStyle : String,
-            globalCompositeOperation : String,
-            startIn : Object Dot,
-            endOut : Object Dot,
-            radius : Number,
-            center : Object Dot,
-            startAngle : Number,
-            endAngle : Number
-         }
+         *  fillStyle : String,
+         *  globalCompositeOperation : String,
+         *  startIn : Object Dot,
+         *  endOut : Object Dot,
+         *  radius : Number,
+         *  center : Object Dot,
+         *  startAngle : Number,
+         *  endAngle : Number
+         * }
          */
         fillArcCircle : function (o) {
             this.context.fillStyle = o.fillStyle;
@@ -224,17 +263,19 @@
         },
 
         /**
-         * @method canvasHandler.fillLine
-         * @param o 对象化的参数
+         * 绘制直线
+         *
+         * @method fillLine
+         * @param {Object} o 对象化的参数
          * @example
-         {
-         fillStyle : 'String',
-         lineWidth : 'Number',
-         lineJoin : 'String',
-         strokeStyle : 'String',
-         dotStart : 'Dot',
-         dotEnd : 'Dot'
-         }
+         * {
+         * fillStyle : 'String',
+         * lineWidth : 'Number',
+         * lineJoin : 'String',
+         * strokeStyle : 'String',
+         * dotStart : 'Dot',
+         * dotEnd : 'Dot'
+         * }
          */
         fillLine : function (o) {
             var wc = KT.controller.window;
@@ -258,8 +299,12 @@
         },
 
         /**
-         * @method 绘制Canvas文字
-         * @param o 对象化的参数 {
+         * 绘制Canvas文字
+         *
+         * @method fillWords
+         * @param {Object} o 对象化的参数
+         * @example
+         * {
          * String fillStyle 填充样式
          * String textBaseline 文字基线
          * String textAlign 文字对齐
@@ -268,11 +313,8 @@
          * Dot center 打印文字的中心点
          * Number maxRadius 最大字符宽度
          * }
-         * @example test
          */
         fillWords : function (o) {
-            var wc = KT.controller.window;
-
             //文本填充样式
             this.context.fillStyle = o.fillStyle;
             //文本的基线
@@ -287,6 +329,7 @@
 
         /**
          * 设置canvas画布的高度和宽度
+         *
          * @method setHandler
          */
         setHandler: function () {

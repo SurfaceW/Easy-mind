@@ -1,8 +1,21 @@
 /**
- * DOM之中的标签上的ID以及CLASS的字符串集合
- * Created by yeqingnan on 14-3-14.
+ * DOM的属性名称映射
+ * - DOM之中的标签上的ID以及CLASS的字符串集合
+ *
+ * @since 1.0
+ * @author TEAM-4
+ */
+
+
+/**
+ * Config 程序参数配置对象
+ *
+ * @class KT.config.domString
+ * @module KT.config
+ * @since 1.0
  */
 KT.config.domString = {
+    //@todo 由于没有最终确定，所以里面的值暂时不注释，以免无用功
     id: {
         /* --------- 登录登出属性类 --------- */
         LOGIN: '#login',

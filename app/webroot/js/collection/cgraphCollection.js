@@ -1,5 +1,8 @@
 /**
+ * Collection构造器
  *
+ * @since 1.0
+ * @author TEAM-4
  */
 (function () {
     "use strict";
@@ -9,15 +12,49 @@
         model = KT.model,
 
 
+        /**
+         * CGraph 集合类实例
+         * + 注意：这个是Collection的扩展实例
+         *
+         * @class KT.collection.cGraph
+         * @extends KT.Collection
+         * @module KT.collection
+         * @uses KT.utils.tool
+         * @uses KT.utils.math
+         * @uses KT.model
+         * @since 1.0
+         */
         cGraphCollection = new KT.Collection();
 
     //自由图集合属性
     tool.defaults(cGraphCollection, {
+        /**
+         * 最大ID
+         *
+         * @property maxId
+         * @type Number
+         */
         maxId : null,
+        /**
+         * 是否初始化
+         *
+         * @property isIni
+         * @type Boolean
+         */
         isIni : false,
-        //创建的cGraph Nodes ID的集合
+        /**
+         * 创建的cGraph Nodes ID的集合
+         *
+         * @property createdNodeId
+         * @type Array
+         */
         createdNodeId : [],
-        //创建的fGraph Nodes ID的集合
+        /**
+         * 删除的cGraph Nodes ID的集合
+         *
+         * @property deletedNodeId
+         * @type Array
+         */
         deletedNodeId : []
     });
 
@@ -25,6 +62,8 @@
     tool.extend(cGraphCollection, {
         /**
          * 获取最大的主要节点ID
+         *
+         * @method findMaxNodeId
          */
         findMaxMainNodeId: function () {
             //----------- 条件判定 -----------
@@ -44,8 +83,10 @@
 
         /**
          * 创建一个新的主节点
-         * @param {Number} x
-         * @param {Number} y
+         *
+         * @method createNewMainNode
+         * @param {Number} x 坐标X
+         * @param {Number} y 坐标Y
          * @returns {Object}
          */
         createNewMainNode : function (x, y) {
@@ -65,6 +106,7 @@
 
         /**
          * 生成该集合的动作序列
+         *
          * @method generateActionSequence
          * @returns {Object}
          */

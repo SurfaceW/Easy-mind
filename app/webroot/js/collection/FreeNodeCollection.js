@@ -1,5 +1,8 @@
 /**
- * @
+ * FreeNodeCollection 构造器
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 (function () {
     "use strict";
@@ -10,19 +13,65 @@
 
         freeNodeGraphCollection;
 
+
+    /**
+     * FreeNodeCollection构造器
+     *
+     * @class KT.FreeNode
+     * @constructor
+     * @module KT
+     * @uses KT.utils.tool
+     * @uses KT.utils.math
+     * @uses KT.config
+     * @since 1.0
+     */
         KT.FreeNode = freeNodeGraphCollection = function () {
-            //保存基本数据
+            /**
+             * 保存基本数据
+             *
+             * @property models 集合类的基本数据
+             * @type Array
+             */
             this.models = [];
 
-            //用户自由视图的id
+            /**
+             * 用户自由视图id
+             *
+             * @property id
+             * @type Number
+             */
             this.id = null;
             //全局主节点的最大ID
+            /**
+             * 全局节点的最大Id
+             *
+             * @property maxId
+             * @type Number
+             */
             this.maxId = null;
             //表示是否被初始化赋值
+            /**
+             * 表示是否被初始化赋值
+             *
+             * @property isIni
+             * @type Boolean
+             */
             this.isIni = false;
-            //新建fNode的集合
+            /**
+             * 新建的fNode的集合
+             * - 注意：里面保存的是节点id，不是对象的clone
+             *
+             * @property createdNodeId
+             * @type Array
+             */
             this.createdFNodeId = [];
-            //删除的fNode的集合
+            /**
+             * 删除的fNode的集合
+             * - 注意：里面保存的是节点id，不是对象的clone
+             *
+             * @property deletedNodeId
+             * @type Array
+             */
             this.deletedFNodeId = [];
 
             this.constructor = KT.Collection;
@@ -33,13 +82,19 @@
 
     //自由图集合属性
     tool.defaults(freeNodeGraphCollection.prototype, {
-        //表示该集合存放的是FreeNodeCollection中的节点
+        /**
+         * 表示该集合存放的是FreeNodeCollection中的节点
+         *
+         * @property type
+         * @type String
+         */
         type : 'freeNode'
     });
     //自由图集合方法
     tool.extend(freeNodeGraphCollection.prototype, {
         /**
          * 创建一个新的子节点
+         *
          * @method createFreeNode
          * @returns {*}
          */
@@ -68,7 +123,9 @@
         },
 
         /**
-         * 删除或拖动图的某个整枝//包括父节点本身
+         * 删除或拖动图的某个整枝
+         * - 包括父节点本身
+         *
          * @method findAllChild
          * @param {Object} callNode Node对象
          */
@@ -93,6 +150,7 @@
 
         /**
          * 求取节点的最大深度
+         *
          * @method findDepth
          * @returns {number}
          */
@@ -109,6 +167,7 @@
 
         /**
          * 求取给定节点深度的ID集合
+         *
          * @param {number} level
          * @returns {Array}
          */
@@ -125,6 +184,7 @@
 
         /**
          * 获取最大的主要节点ID
+         *
          * @method findMaxFreeNodeId
          */
         findMaxFreeNodeId: function () {
@@ -143,6 +203,7 @@
 
         /**
          * 公有方法：给定id，返回相应的节点对象
+         *
          * @method getNode
          * @param {Number} id
          * @returns {*}
@@ -153,6 +214,7 @@
 
         /**
          * 获得父节点Model对象
+         *
          * @method getParentNode
          * @param {Object} node
          * @returns {Model}
@@ -163,6 +225,7 @@
 
         /**
          * 产生对应的节点集合的动作序列
+         *
          * @returns {*}
          */
         generateActionSequence : function () {

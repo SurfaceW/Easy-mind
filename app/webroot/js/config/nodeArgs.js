@@ -1,8 +1,20 @@
 /**
- * KTree树形的基本配置参数
- * Created by yeqingnan on 14-3-15.
+ * KGraph的节点参数配置
+ *
+ * @since 1.0
+ * @author TEAM-4
+ */
+
+
+/**
+ * KGraph节点参数配置
+ *
+ * @class KT.config.nodeArgs
+ * @module KT.config
+ * @since 1.0
  */
 KT.config.nodeArgs = {
+    //@todo 由于没有最终确定，所以里面的值暂时不注释，以免无用功
     MAIN : {
         COLOR : {
             base : '57,181,74',

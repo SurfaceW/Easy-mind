@@ -1,9 +1,9 @@
 /**
- * 欢迎视图
- * @instance welcomeView
- * @version 1.0
- * @time 2014-05-22 10:47:09
- * @author TEAM_4
+ * welcome的View实例
+ * - 欢迎视图
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 (function () {
     "use strict";
@@ -12,18 +12,37 @@
         CLASS = KT.config.domString.classes,
 
         tool = KT.utils.tool,
-        //状态机
-        //welcome为View的实例
+
+        /**
+         * Welcome视图
+         * + 注意：这个是View的扩展实例
+         *
+         * @class KT.view.welcome
+         * @extends KT.View
+         * @module KT.view
+         * @uses KT.utils.tool
+         * @uses KT.config.domString.id
+         * @uses KT.config.domString.classes
+         * @since 1.0
+         */
         welcomeView = new KT.View();
 
     /* -------------------- 公有方法 -------------------- */
 
     tool.defaults(welcomeView,{
         /*
-         用于表示当前正在显示的属性 String
-         login : 表示登陆框显示
-         signUp : 表示注册框显示
-         forgot : 表示忘记密码显示
+
+         */
+        /**
+         * 当前视图
+         * <p>
+         * 用于表示当前正在显示的属性
+         * <li>login : 表示登陆框显示</li>
+         * <li>signUp : 表示注册框显示</li>
+         * <li>forgot : 表示忘记密码显示</li>
+         * </p>
+         * @property currentDisplay
+         * @type String
          */
         currentDisplay : null
 
@@ -32,6 +51,7 @@
     tool.extend(welcomeView, {
         /**
          * 控制在welcome三组件中来回跳转
+         *
          * @method showLogin
          */
         showLogin : function () {
@@ -42,6 +62,11 @@
             this.currentDisplay = 'login';
         },
 
+        /**
+         * 控制在welcome三组件中来回跳转
+         *
+         * @method showSignUp
+         */
         showSignUp : function () {
             this.hide(ID.LOGIN, 'hide');
             this.hide(ID.FORGOT, 'hide');
@@ -50,6 +75,11 @@
             this.currentDisplay = 'signUp';
         },
 
+        /**
+         * 控制在welcome三组件中来回跳转
+         *
+         * @method showForgot
+         */
         showForgot : function () {
             this.hide(ID.SIGNUP, 'hide');
             this.hide(ID.LOGIN, 'hide');
@@ -58,6 +88,11 @@
             this.currentDisplay = 'forgot';
         },
 
+        /**
+         * 启动介绍功能组件
+         *
+         * @method learnMore
+         */
         learnMore : function () {
             $(ID.WELCOME_MAIN).animate({
                 left: parseInt($(ID.WELCOME_MAIN).css('left'), 10) === 0 ? $(ID.WELCOME_INTRO).width() : 0
@@ -76,11 +111,12 @@
                     marginLeft: $(window).width() / 2 - 185
                 });
             }
-
         },
 
         /**
          * 当窗口大小修改的时候，修改空间的显示位置
+         *
+         * @method resize
          */
         resize : function () {
             switch (this.currentDisplay) {

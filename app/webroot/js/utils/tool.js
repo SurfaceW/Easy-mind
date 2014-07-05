@@ -1,12 +1,18 @@
 /**
- * @instance tool
- * @version 1.0
- * @time 2014-05-23 21:12:05
- * @author TEAM_4
+ * 工具类 - 基础工具
+ * - 对原有的jQuery工具类进行扩充
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 
+
 /**
+ * 工具-扩展工具类
  *
+ * @class KT.utils.tool
+ * @module KT.utils
+ * @since 1.0
  */
 KT.utils.tool = (function () {
     "use strict";
@@ -17,6 +23,8 @@ KT.utils.tool = (function () {
     return {
         /**
          * 相对应地对象之中添加默认的属性值
+         *
+         * @method defaults
          * @notice 如果该属性存在则不予以覆盖
          * @param {Object} obj
          * @returns {*}
@@ -37,6 +45,7 @@ KT.utils.tool = (function () {
 
         /**
          * 继承函数
+         *
          * @method extend
          * @notice 新的属性会覆盖旧的属性
          * @param {Object} child
@@ -58,6 +67,7 @@ KT.utils.tool = (function () {
 
         /**
          * 遍历函数
+         *
          * @method each
          * @param {Object} obj 遍历对象
          * @param {Function} iterator 遍历的迭代函数
@@ -88,6 +98,7 @@ KT.utils.tool = (function () {
 
         /**
          * 验证对象是否具有给定属性
+         *
          * @method has
          * @param {Object} obj
          * @param {String} key
@@ -99,8 +110,9 @@ KT.utils.tool = (function () {
 
         /**
          * 删除数组中的对应值的元素
-         * @param array
-         * @param key
+         *
+         * @param {Array} array
+         * @param {*} key
          */
         remove : function (array, key) {
             var i;

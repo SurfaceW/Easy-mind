@@ -1,5 +1,5 @@
 /**
- * user实例
+ * user的Model实例
  *
  * @since 1.0
  * @author TEAM-4
