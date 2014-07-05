@@ -1,5 +1,8 @@
 /**
- * Created by surfacew on 14-4-10.
+ * Controller构造器
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 (function () {
     "use strict";
@@ -31,6 +34,7 @@
         /**
          * 添加事件监听器
          *
+         * @method addListener
          * @param context 侦听事件的上下文
          * @param name 侦听事件的名称
          * @param func 对应的回调函数
@@ -43,6 +47,7 @@
         /**
          * 绑定单次执行的监听器
          *
+         * @method addOneShot
          * @param context 侦听事件的上下文
          * @param name 侦听事件的名称
          * @param func 对应的回调函数
