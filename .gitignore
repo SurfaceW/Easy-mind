@@ -28,3 +28,7 @@ app/webroot/.idea/scopes/scope_settings.xml
 app/webroot/.idea/vcs.xml
 
 app/webroot/.idea/workspace.xml
+
+app/tmp/cache/persistent/myapp_cake_core_cake_dev_zh-cn
+
+app/tmp/cache/persistent/myapp_cake_core_file_map
