@@ -16,7 +16,6 @@
          * @class KT.model.user
          * @extends KT.Model
          * @module KT.model
-         * @uses KT.utils.tool
          * @since 1.0
          */
             userModel = new KT.Model({

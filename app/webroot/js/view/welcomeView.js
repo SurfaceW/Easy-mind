@@ -20,9 +20,6 @@
          * @class KT.view.welcome
          * @extends KT.View
          * @module KT.view
-         * @uses KT.utils.tool
-         * @uses KT.config.domString.id
-         * @uses KT.config.domString.classes
          * @since 1.0
          */
         welcomeView = new KT.View();

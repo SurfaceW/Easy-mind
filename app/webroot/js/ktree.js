@@ -17,7 +17,7 @@ var KT = window.KT || {};
  * 用于存储展示的节点数据和缓存已经加载的数据
  *
  * @module KT
- * @submodule collections
+ * @submodule KT.collections
  * @type {Array}
  */
 KT.collections = [];
@@ -35,7 +35,7 @@ KT.FreeNode = null;
  * 模型层模块
  *
  * @module KT
- * @submodule model
+ * @submodule KT.model
  */
 KT.model = {};
 
@@ -43,7 +43,7 @@ KT.model = {};
  * KGraph的集合层模块
  *
  * @module KT
- * @submodule collection
+ * @submodule KT.collection
  */
 KT.collection = {};
 
@@ -51,7 +51,7 @@ KT.collection = {};
  * KGraph的控制层模块
  *
  * @module KT
- * @submodule controller
+ * @submodule KT.controller
  */
 KT.controller = {};
 
@@ -59,7 +59,7 @@ KT.controller = {};
  * KGraph的视图层模块
  *
  * @module KT
- * @submodule view
+ * @submodule KT.view
  */
 KT.view = {};
 
@@ -67,7 +67,7 @@ KT.view = {};
  * KGraph的工具库模块
  *
  * @module KT
- * @submodule utils
+ * @submodule KT.utils
  */
 KT.utils = {};
 
@@ -75,7 +75,7 @@ KT.utils = {};
  * KGraph的配置数据模块
  *
  * @module KT
- * @submodule config
+ * @submodule KT.config
  */
 KT.config = {};
 

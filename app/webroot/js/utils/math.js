@@ -223,8 +223,9 @@ KT.utils.math = (function () {
         },
 
         /**
-         * @method 三阶矩阵乘法，输入矩阵a,b返回值数组
+         * 矩阵乘法
          *
+         * @method matrixMultiply
          * @param matrix_a 矩阵的数组
          * @param matrix_b 矩阵的数组
          * @returns {*[]}
@@ -296,9 +297,7 @@ KT.utils.math = (function () {
         /**
          * 点类的构造器函数
          *
-         * @class KT.utils.math.Dot
-         * @constructor
-         * @module KT.utils.math
+         * @method Dot
          * @param {Number} x
          * @param {Number} y
          */
@@ -331,8 +330,7 @@ KT.utils.math = (function () {
         /**
          * Vector构造函数，返回有vLength、起始点和终止点的矢量
          *
-         * @class KT.utils.math.Vector
-         * @constructor
+         * @method Vector
          * @module KT.utils.math
          * @param {Dot} Dot1 Dot对象 起始点
          * @param {Dot} Dot2 Dot对象 终止点

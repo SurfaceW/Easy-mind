@@ -18,8 +18,6 @@
          * @class KT.Collection
          * @constructor
          * @module KT
-         * @uses KT.utils.tool
-         * @uses KT.config.urls
          * @param {Object} attributes 初始化属性
          * @param {Function} initializer 初始化执行函数
          * @since 1.0
@@ -35,11 +33,11 @@
     tool.defaults(Collection.prototype, {
         /**
          * 当前的ActionSequence POST的URL
-         * - currentURL.cGraph
-         * - currentURL.freeGraph
+         * - currentURL.cGraph String
+         * - currentURL.freeGraph String
          *
          * @property currentURL
-         * @type String
+         * @type Object
          */
         currentURL : {
             cGraph : URLS.asCGraph,
@@ -131,7 +129,7 @@
          *
          * @method postActionSequence
          * @param {String} currentView 当前视图的字符串
-         * @param {Object} collection 提供对应generateActionSequence()方法返回动作序列的字符串的集合对象
+         * @param {Object} collection 提供对应KT.Collection.prototype.generateActionSequence()方法返回动作序列的字符串的集合对象
          * @param {Function} [success] 响应成功的回调
          * @param {Function} [error] 响应失败的回调
          */

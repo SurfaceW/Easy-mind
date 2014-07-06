@@ -21,8 +21,6 @@
          * @class KT.model.window
          * @extends KT.Model
          * @module KT.model
-         * @uses KT.utils.tool
-         * @uses KT.utils.math
          * @since 1.0
          */
         windowModel = new Model({
