@@ -100,7 +100,6 @@
          * @class KT.controller.cGraph
          * @extends KT.Controller
          * @module KT.controller
-         * @uses KT.utils.tool
          * @since 1.0
          */
         cGraphController = new KT.Controller();
@@ -523,7 +522,6 @@
          * 利用private使该代码块文档化时不可见
          *
          * @method hoverTest
-         * @for zoom
          */
         hoverTest : function () {
             that.removeListener('mousemove.nodeHover');

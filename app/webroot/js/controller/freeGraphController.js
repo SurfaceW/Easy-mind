@@ -88,7 +88,6 @@
          * @class KT.controller.freeGraph
          * @extends KT.Controller
          * @module KT.controller
-         * @uses KT.utils.tool
          * @since 1.0
          */
         freeNodeGraphController = new KT.Controller();

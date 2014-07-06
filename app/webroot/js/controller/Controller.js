@@ -15,7 +15,6 @@
          * @class KT.Controller
          * @constructor
          * @module KT
-         * @uses KT.utils.tool
          * @since 1.0
          */
         Controller = KT.Controller = function () {

@@ -50,7 +50,6 @@
          * @class KT.controller.window
          * @extends KT.Controller
          * @module KT.controller
-         * @uses KT.utils.tool
          * @since 1.0
          */
         windowController = new KT.Controller();
