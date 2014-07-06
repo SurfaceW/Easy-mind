@@ -1,7 +1,7 @@
 /**
- * @instance cGraphView
- * @Vision 1.0
- * @time 2014-05-22 10:49:26
+ * CGraph的View实例
+ *
+ * @since 1.0
  * @author TEAM-4
  */
 (function () {
@@ -15,13 +15,26 @@
         windowModel = KT.model.window,
         collection = KT.collection,
 
-        //cGraph的View的实例
+        /**
+         * CGraph视图
+         * + 注意：这个是View的扩展实例
+         *
+         * @class KT.view.cGraph
+         * @extends KT.View
+         * @module KT.view
+         * @uses KT.utils.tool
+         * @uses KT.view
+         * @uses KT.collection
+         * @uses KT.model.window
+         * @since 1.0
+         */
         cGraphView = new KT.View();
 
     /* -------------------- 公有方法 -------------------- */
     tool.extend(cGraphView, {
         /**
          * 绘制用户的Main View
+         *
          * @method drawMainGraph
          */
         drawMainGraph : function () {
@@ -64,9 +77,5 @@
         }
     });
 
-    /**
-     * @namespace KT.view.cGrAPH
-     * @type {window.KT.View}
-     */
     KT.view.cGraph = cGraphView;
 }());

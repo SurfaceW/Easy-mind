@@ -1,9 +1,12 @@
 /**
- * @instance KT URLS
- * @version 1.0
- * @time 2014-05-25 22:35:33
- * @author GregoryGrey
+ * KGraph URL静态参数表
+ * 和后端通信的标准URL和接口
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
+
+
 
 /**
  * 服务器build版本
@@ -18,8 +21,13 @@ KT.config.urls = {
     asFGraph : '../../Nodes/update'
 };
 */
+
 /**
- * localhost test 版本
+ * KGraph和后端通信的标准URL静态列表
+ *
+ * @class KT.config.urls
+ * @module KT.config
+ * @since 1.0
  */
 KT.config.urls = {
     signUp : '../../Easy-mind/Users/signUp',

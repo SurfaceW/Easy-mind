@@ -1,7 +1,7 @@
 /**
- * @instance freeGraphView
- * @vision 1.1
- * @time 2014-05-23 10:29:24
+ * freeGraph的View实例
+ *
+ * @since 1.0
  * @author TEAM-4
  */
 (function (globalWindow) {
@@ -15,16 +15,29 @@
 
         view = KT.view,
 
+        //内部指针
         that,
 
         //简化函数调用
         getWL = KT.model.window.getWindowLocation,
 
-        //cGraph的View的实例
+        /**
+         * freeGraph视图
+         * + 注意：这个是View的扩展实例
+         *
+         * @class KT.view.freeGraph
+         * @extends KT.View
+         * @module KT.view
+         * @uses KT.utils.tool
+         * @uses KT.utils.math
+         * @uses KT.config.nodeArgs
+         * @since 1.0
+         */
         freeGraphView = new KT.View();
 
     /* -------------------- 私有属性 ------------------- */
     tool.extend(freeGraphView, {
+        //@todo 应该转移到Controller之中，毕竟是状态机
         animateHoverCircleFinish : true
     });
 
@@ -32,13 +45,16 @@
     tool.extend(freeGraphView, {
         /**
          * 处理鼠标移到节点上的hover动画
-         * @param o
-         * @example o = {
-           center : Dot,
-           radius : Number,
-           radiusStart : Number,
-           radiusEnd : Number
-          }
+         *
+         * @method animateHoverCircle
+         * @param {Object} o 对象化参数
+         * @example
+         * o = {
+         *  center : Dot,
+         *  radius : Number,
+         *  radiusStart : Number,
+         *  radiusEnd : Number
+         * }
          */
         animateHoverCircle : function (o) {
             //----------------------- 基本函数控制 ----------------------------/
@@ -82,6 +98,7 @@
 
         /**
          * 绘制整个视图
+         *
          * @method drawFreeGraph
          * @param {Function} [before] 防止clearCanvas的干扰
          */
@@ -156,9 +173,10 @@
 
         /**
          * 绘制Hover按钮之中的提示效果
+         *
+         * @method drawHoverHint
          * @param {Dot} position 绘制图形的位置
          * @param {String} type 绘制图形的样式
-         * @todo 加减常数改为
          */
         drawHoverHint : function (position, type) {
             switch (type) {

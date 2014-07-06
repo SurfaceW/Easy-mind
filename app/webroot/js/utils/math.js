@@ -1,19 +1,28 @@
 /**
- * Title: 生成树所需要的数学系统
- * Function: 基础的生成树的函数结构，知识源于仿射几何学，以及Js中的API
- * Author: Created by YQN,Edited By YQN | Recent Modified Time: 11.22
- * Version: 1.0.2
+ * 工具类 - 数学类
+ * - 主要是仿射几何变换和一些基本的坐标计算
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 
+/**
+ * 工具-数学类
+ *
+ * @class KT.utils.math
+ * @module KT.utils
+ * @since 1.0
+ */
 KT.utils.math = (function () {
     "use strict";
     return {
         /**
          * 传入两个点，返回斜率
+         *
          * @method findSlope
          * @param {Dot} Dot1
          * @param {Dot} Dot2
-         * @returns {Number} || Infinity
+         * @returns {Number | Infinity}
          */
         findSlope: function (Dot1, Dot2) {
             return (Dot2.y - Dot1.y) / (Dot2.x - Dot1.x);
@@ -21,6 +30,8 @@ KT.utils.math = (function () {
 
         /**
          * 传入三个Dot对象，计算前Dot1所对应的两边的夹角
+         *
+         * @method findTriangleTheta
          * @param Dot1
          * @param Dot2
          * @param Dot3
@@ -39,6 +50,8 @@ KT.utils.math = (function () {
 
         /**
          * 求得方向斜率
+         *
+         * @method findDirection
          * @param compare
          * @param k_1
          * @param k_2
@@ -150,6 +163,7 @@ KT.utils.math = (function () {
 
         /**
          * 偏移量计算函数 | 传入亮点和偏移量，返回生成的坐标点
+         *
          * @method findMoveDistance
          * @param {Dot} Dot1
          * @param {Dot} Dot2
@@ -176,6 +190,7 @@ KT.utils.math = (function () {
 
         /**
          * 求两点间的距离（返回整数值的距离）
+         *
          * @method findDistance
          * @param {Dot} Dot1
          * @param {Dot} Dot2
@@ -187,6 +202,7 @@ KT.utils.math = (function () {
 
         /**
          * 传入一个中心点和位置点，返回一个象限
+         *
          * @method findQuadrant
          * @param {Dot} c
          * @param {Dot} p
@@ -208,6 +224,7 @@ KT.utils.math = (function () {
 
         /**
          * @method 三阶矩阵乘法，输入矩阵a,b返回值数组
+         *
          * @param matrix_a 矩阵的数组
          * @param matrix_b 矩阵的数组
          * @returns {*[]}
@@ -236,6 +253,8 @@ KT.utils.math = (function () {
 
         /**
          * 平均缩放转换，放大倍数是scale，源输入矩阵为1*3数组
+         *
+         * @method transformScale
          * @param {Array} matrix [a,b,c]
          * @param {Number} scale
          * @param {Number} x
@@ -255,6 +274,8 @@ KT.utils.math = (function () {
         /**
          * 旋转变换
          * 输入两个坐标值，然后让其坐标绕(x,y)点旋转theta的角度
+         *
+         * @method transformRotation
          * @param {Array} matrix
          * @param {Number} theta
          * @param {Number} x
@@ -274,9 +295,12 @@ KT.utils.math = (function () {
 
         /**
          * 点类的构造器函数
+         *
+         * @class KT.utils.math.Dot
+         * @constructor
+         * @module KT.utils.math
          * @param {Number} x
          * @param {Number} y
-         * @constructor Dot
          */
         Dot: function (x, y) {
             x = Number(x);
@@ -289,11 +313,12 @@ KT.utils.math = (function () {
 
         /**
          * 给定范围，并给定一个值，返回该值属于哪个范围
+         *
          * @method selectRange
          * @param {Number} number
          * @returns {Number}
          * @example
-         console.log(selectRange(23,10,20,30)); //3
+         * console.log(selectRange(23,10,20,30)); //3
          */
         selectRange : function (number) {
             var i = 1;
@@ -305,9 +330,12 @@ KT.utils.math = (function () {
 
         /**
          * Vector构造函数，返回有vLength、起始点和终止点的矢量
+         *
+         * @class KT.utils.math.Vector
+         * @constructor
+         * @module KT.utils.math
          * @param {Dot} Dot1 Dot对象 起始点
          * @param {Dot} Dot2 Dot对象 终止点
-         * @constructor Vector
          */
         Vector: function (Dot1, Dot2) {
             //私有变量
