@@ -15,7 +15,6 @@
          * @class KT.View
          * @constructor
          * @module KT
-         * @uses KT.utils.tool
          * @param {Object} attributes 初始化属性
          * @param {Function} initializer 初始化执行函数
          * @since 1.0

@@ -22,10 +22,6 @@
          * @class KT.view.cGraph
          * @extends KT.View
          * @module KT.view
-         * @uses KT.utils.tool
-         * @uses KT.view
-         * @uses KT.collection
-         * @uses KT.model.window
          * @since 1.0
          */
         cGraphView = new KT.View();

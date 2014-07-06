@@ -20,16 +20,14 @@
      * @class KT.FreeNode
      * @constructor
      * @module KT
-     * @uses KT.utils.tool
-     * @uses KT.utils.math
-     * @uses KT.config
      * @since 1.0
      */
         KT.FreeNode = freeNodeGraphCollection = function () {
             /**
              * 保存基本数据
+             * <p style="color:blue">主要是集合类的基本数据</p>
              *
-             * @property models 集合类的基本数据
+             * @property models
              * @type Array
              */
             this.models = [];

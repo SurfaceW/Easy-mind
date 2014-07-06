@@ -1,8 +1,9 @@
 /**
- * @instance windowView
- * @version 1.0
- * @time 2014-05-22 10:52:59
- * @author TEAM_4
+ * Window的View实例
+ * - 窗口视图
+ *
+ * @since 1.0
+ * @author TEAM-4
  */
 (function () {
     "use strict";
@@ -10,16 +11,25 @@
     var ID = KT.config.domString.id,
         tool = KT.utils.tool,
 
-        //实例化window
+        /**
+         * Window视图
+         * + 注意：这个是View的扩展实例
+         *
+         * @class KT.view.window
+         * @extends KT.View
+         * @module KT.view
+         * @since 1.0
+         */
         windowView = new KT.View({});
 
     //window的方法
     tool.extend(windowView, {
         /**
          * 修改鼠标的样式
+         *
          * @method mouseChange
-         * @param mouseType
-         * @param object 传入的上下文对象
+         * @param {String} mouseType
+         * @param {Object} object 传入的上下文对象
          * @notice 注意绑定的客体上必须清晰明确
          */
         mouseChange : function (object, mouseType) {
@@ -30,6 +40,7 @@
 
         /**
          * 菜单的移动
+         *
          * @method toggleMenu
          */
         toggleMenu : function () {

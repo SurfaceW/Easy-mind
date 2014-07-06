@@ -28,9 +28,6 @@
          * @class KT.view.freeGraph
          * @extends KT.View
          * @module KT.view
-         * @uses KT.utils.tool
-         * @uses KT.utils.math
-         * @uses KT.config.nodeArgs
          * @since 1.0
          */
         freeGraphView = new KT.View();

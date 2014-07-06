@@ -20,10 +20,6 @@
          * @class KT.view.canvas
          * @extends KT.View
          * @module KT.view
-         * @uses KT.utils.tool
-         * @uses KT.config.id
-         * @uses KT.config.nodeArgs
-         * @uses KT.model.window
          * @since 1.0
          */
         canvasView = new KT.View();

@@ -19,9 +19,6 @@
          * @class KT.collection.cGraph
          * @extends KT.Collection
          * @module KT.collection
-         * @uses KT.utils.tool
-         * @uses KT.utils.math
-         * @uses KT.model
          * @since 1.0
          */
         cGraphCollection = new KT.Collection();
