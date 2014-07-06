@@ -29,7 +29,13 @@
 
         /**
          * 实例化welcome控制器
-         * @method welcomeController
+         * + 注意：这个是Controller的扩展实例
+         *
+         * @class KT.controller.welcome
+         * @extends KT.Controller
+         * @module KT.controller
+         * @uses KT.utils.tool
+         * @since 1.0
          */
         welcomeController = new KT.Controller();
     /**
