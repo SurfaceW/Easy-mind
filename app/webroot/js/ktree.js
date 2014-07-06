@@ -71,12 +71,6 @@ KT.view = {};
  */
 KT.utils = {};
 
-/**
- * KGraph的配置数据模块
- *
- * @module KT
- * @submodule config
- */
 KT.config = {};
 
 

@@ -10,6 +10,7 @@
  *
  * @class KT.config
  * @module KT
+ * @static
  * @since 1.0
  */
 KT.config = {

@@ -34,7 +34,6 @@
          * @class KT.controller.welcome
          * @extends KT.Controller
          * @module KT.controller
-         * @uses KT.utils.tool
          * @since 1.0
          */
         welcomeController = new KT.Controller();
