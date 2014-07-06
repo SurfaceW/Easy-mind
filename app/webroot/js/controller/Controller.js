@@ -19,15 +19,37 @@
          * @since 1.0
          */
         Controller = KT.Controller = function () {
-            //常规事件监听器集合
+            /**
+             * 常规事件监听器集合
+             *
+             * @attribute eventSet
+             * @type {{}}
+             */
             this.eventSet = {};
-            //单次触发事件集合
+            /**
+             * 单次触发事件集合
+             *
+             * @attribute oneShot
+             * @type {{}}
+             */
             this.oneShot = {};
-
-            //操作顺序栈
+            /**
+             * 操作顺序栈
+             *
+             * @attribute operations
+             * @type {Array}
+             */
             this.operations = [];
+            /**
+             * 操作序列栈长
+             *
+             * @attribute operationsMaxLength
+             * @readOnly
+             * @type {number}
+             * @default 10
+             */
             this.operationsMaxLength = 10;
-    };
+        };
 
     //Controller类的方法
     tool.extend(Controller.prototype, {
@@ -35,9 +57,9 @@
          * 添加事件监听器
          *
          * @method addListener
-         * @param context 侦听事件的上下文
-         * @param name 侦听事件的名称
-         * @param func 对应的回调函数
+         * @param {String} context 侦听事件的上下文
+         * @param {String} name 侦听事件的名称
+         * @param {Function} func 对应的回调函数
          */
         addListener : function (context, name, func) {
             $(context).bind(name, func);
@@ -48,9 +70,9 @@
          * 绑定单次执行的监听器
          *
          * @method addOneShot
-         * @param context 侦听事件的上下文
-         * @param name 侦听事件的名称
-         * @param func 对应的回调函数
+         * @param {String} context 侦听事件的上下文
+         * @param {String} name 侦听事件的名称
+         * @param {Function} func 对应的回调函数
          */
         addOneShot : function (context, name, func) {
             $(context).one(name, func);
@@ -115,7 +137,7 @@
          * 删除并且解绑常规的事件监听器
          *
          * @method removeListener
-         * @param name {String} 侦听的事件名称
+         * @param {String} name 侦听的事件名称
          */
         removeListener: function (name) {
             $(this.eventSet[name]).unbind(name);

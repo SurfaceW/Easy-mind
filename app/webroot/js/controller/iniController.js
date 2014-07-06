@@ -1,7 +1,10 @@
 /**
- * @instance iniController
- * @version 1.0
- * @time 2014-05-22 11:09:05
+ * iniController
+ * 智慧树苗植根于此
+ * 知识之树在这里长成
+ * 奇迹也将在这里发生
+ *
+ * @since 1.0
  * @author TEAM_4
  */
 (function () {
@@ -16,8 +19,9 @@
     tool.extend(iniController, {
         /**
          * 当文档加载事件完毕之后，调用ini的方法初
-         * @method iniStart
          * 始化Canvas配置 || 初始化model中window的基本参数
+         *
+         * @method iniStart
          */
         iniStart: function () {
             controller.window.iniWindowController();

@@ -1,7 +1,8 @@
 /**
- * @instance windowController
- * @version 1.0
- * @time 2014-05-26 14:55:44
+ * windowController
+ * 窗口事件、逻辑控制集
+ *
+ * @since 1.0
  * @author TEAM_4
  */
 (function () {
@@ -17,15 +18,42 @@
         controller = KT.controller,
         view = KT.view,
 
+        /**
+         * 转换this
+         * that = KT.controller.window
+         *
+         * @attribute that
+         * @private
+         */
         that,
 
-        isDrag, //存储Window的状态，是否是Drag状态
-        stopDrag, //存储setTimeout的返回对象
+        /**
+         * 存储Window的状态，是否是Drag状态
+         * @attribute isDrag
+         * @type {Boolean}
+         * @private
+         */
+        isDrag,
 
+        /**
+         * 存储setTimeout的返回对象
+         * @attribute stopDrag
+         * @type {Object}
+         * @private
+         */
+        stopDrag,
+
+        /**
+         * window的
+         *
+         * @method windowController
+         */
         windowController = new KT.Controller();
 
     /**
      * 绑定窗口RESIZE事件
+     *
+     * @method bindResizeEvent
      * @private
      */
     function bindResizeEvent() {
@@ -56,6 +84,8 @@
 
     /**
      * 绑定ICON点击事件和动画
+     *
+     * @method bindIconClickEvent
      * @private
      */
     function bindIconClickEvent() {
@@ -135,7 +165,9 @@
 
     /**
      * 绑定快捷方式
+     *
      * @method bindShortcutsEvent
+     * @private
      */
     function bindShortcutsEvent() {
         that.addListener(document, 'keydown.shortcuts', function (e) {
@@ -163,7 +195,9 @@
 
     /**
      * 绑定modal的关闭事件，并在关闭前保存modal数据
+     *
      * @method bindCloseClickEvent
+     * @private
      */
     function bindCloseClickEvent() {
         that.addListener(ID.CGRAPH_CLOSE, 'click.cGraphModalClose', function () {
@@ -179,6 +213,7 @@
 
     /**
      * 绑定modal的拖动事件
+     *
      * @method bindAllModalDraggable
      * @private
      */
@@ -247,31 +282,46 @@
 
     /**
      * 绑定modal内的按钮事件
+     *
      * @method bindModalButtonEvents
+     * @private
      */
     function bindModalButtonEvents() {
     }
 
 
     tool.defaults(windowController, {
-        //用于表示当前Window所处环境
-        /*
-         一共有如下的属性值：String
-         welcome : 表示正处于欢迎视图
-         cGraph : 用户选择主要视图
-         freeGraph : 自由图编辑视图
+        /**
+         * 当前视图标签
+         *
+         * @property currentView
+         * @type {welcome||cGraph||freeGraph}
          */
         currentView : null,
 
-        //缩放相关
+        /**
+         * 设定缩放尺寸
+         *
+         * @property ZOOM_POOL
+         * @type {Array}
+         * @readOnly
+         */
         ZOOM_POOL : [0.25, 0.33, 0.5, 0.67, 0.75, 0.9, 1, 1.25, 1.5, 1.75, 2, 3, 4, 5],
 
+        /**
+         * 设定缩放级别
+         *
+         * @property zoomLevel
+         * @type {Number} 1-14
+         * @default 6
+         */
         zoomLevel : 6
     });
 
     tool.extend(windowController, {
         /**
          * 初始化Window事件体系
+         *
          * @method iniWindowController
          */
         iniWindowController : function () {
@@ -287,9 +337,10 @@
 
         /**
          * 绑定拖动Window的事件
-         * @method bindDragWindowEvent
-         * @param context 事件绑定的上下文
-         * @param redrawF 更新绘制事件
+         *
+         * @event bindDragWindowEvent
+         * @param {String} context 事件绑定的上下文
+         * @param {Function} redrawF 更新绘制事件
          */
         bindDragWindowEvent : function (context, redrawF) {
             this.addListener(document, 'dragWindow', function () {
@@ -355,6 +406,7 @@
 
         /**
          * 全屏化窗口
+         *
          * @method fullScreen
          * @note code from MDN Lib
          */
@@ -386,6 +438,7 @@
 
         /**
          * 遍历传入的节点数组是否在当前的视窗之中
+         *
          * @method findInCurrentWindow
          * @param {Collection} collection 集合类
          */
@@ -395,6 +448,7 @@
 
         /**
          * 删除窗口侦听器
+         *
          * @method removeDragWindowEvent
          */
         removeDragWindowEvent : function () {
