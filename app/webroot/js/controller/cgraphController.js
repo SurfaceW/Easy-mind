@@ -95,8 +95,13 @@
 
         /**
          * 实例化cGraph控制器
+         * + 注意：这个是Controller的扩展实例
          *
-         * @method cGraphController
+         * @class KT.controller.cGraph
+         * @extends KT.Controller
+         * @module KT.controller
+         * @uses KT.utils.tool
+         * @since 1.0
          */
         cGraphController = new KT.Controller();
 

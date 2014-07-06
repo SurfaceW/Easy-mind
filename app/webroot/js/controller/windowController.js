@@ -44,9 +44,14 @@
         stopDrag,
 
         /**
-         * window的
+         * 实例化window控制器
+         * + 注意：这个是Controller的扩展实例
          *
-         * @method windowController
+         * @class KT.controller.window
+         * @extends KT.Controller
+         * @module KT.controller
+         * @uses KT.utils.tool
+         * @since 1.0
          */
         windowController = new KT.Controller();
 
