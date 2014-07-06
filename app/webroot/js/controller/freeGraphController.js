@@ -1,7 +1,8 @@
 /**
- * @instance freeGraphController
- * @version 2.0 自动化功能版本
- * @time 2014-05-25 11:35:58
+ * freeGraphController
+ * 自由视图的事件、逻辑控制集
+ *
+ * @since 2.0 自动化功能版本
  * @author TEAM_4
  */
 (function () {
@@ -20,27 +21,76 @@
         controller = KT.controller,
         view = KT.view,
 
-        //this转换
-        that,
-
-        //私有状态机
-        hoverStatus = null, //表示鼠标在节点上Hover的时刻的所属区域状态
-        isAdding = false, //表示是否正在添加节点
-        isHovering = false,
-        isHold, //存储Hover的时候，用户是否尝试拖拽
-        stopHold, //存储上面模式产生的setTimeout返回对象
-        isDragging = false, //表示当前正在拖动节点对象
-        allowShowModal = true, //表示是否允许属性模态框显示
-        
         //方法调用化简
         getCL = model.window.getCanvasLocation,
         getWL = model.window.getWindowLocation,
 
-        //实例化
+        /**
+         * 转换this
+         * that = KT.controller.freeGraph
+         *
+         * @attribute that
+         * @private
+         */
+        that,
+
+        //私有状态机
+        /**
+         * 表示鼠标在节点上Hover的时刻的所属区域状态
+         * @attribute hoverStatus
+         * @type {null}
+         * @private
+         */
+        hoverStatus = null,
+
+        /**
+         * 表示是否正在添加节点
+         * @attribute isAdding
+         * @type {boolean}
+         * @private
+         */
+        isAdding = false,
+
+        /**
+         * 表示是否处于节点Hovering的指示器
+         *
+         * @attribute isHovering
+         * @type {boolean}
+         * @private
+         */
+        isHovering = false,
+
+        isHold, //存储Hover的时候，用户是否尝试拖拽
+        stopHold, //存储上面模式产生的setTimeout返回对象
+
+        /**
+         * 表示当前正在拖动节点对象
+         *
+         * @attribute isDragging
+         * @type {boolean}
+         * @private
+         */
+        isDragging = false,
+
+        /**
+         * 表示模态框是否被允许显示
+         *
+         * @attribute allowShowModal
+         * @type {boolean}
+         * @private
+         */
+        allowShowModal = true,
+        
+        /**
+         * 实例化freeGraph控制器
+         *
+         * @method freeNodeGraphController
+         */
         freeNodeGraphController = new KT.Controller();
 
     /**
      * 绑定Hover节点事件
+     *
      * @method bindHoverNodeEvent
      * @private
      */
@@ -253,6 +303,7 @@
 
     /**
      * 绑定拖动节点事件
+     *
      * @method bindDragNodeEvent
      * @private
      */
@@ -397,6 +448,7 @@
 
     /**
      * 添加新的节点事件
+     *
      * @method bindPropertyNodeEvent
      * @private
      */
@@ -439,6 +491,7 @@
 
     /**
      * 绑定节点属性编辑事件
+     *
      * @method bindPropertyChangeEvent
      * @private
      */
@@ -509,6 +562,7 @@
 
     /**
      * 绑定节点添加事件
+     *
      * @method bindAddNodeEvent
      * @private
      */
@@ -559,6 +613,7 @@
 
     /**
      * 绑定删除节点事件
+     *
      * @method bindDeleteNodeEvent
      * @private
      */
@@ -630,6 +685,7 @@
 
     /**
      * 绑定前去子视图的事件
+     *
      * @method bindGotoSubView
      * @private
      */
@@ -640,6 +696,7 @@
 
     /**
      * 绑定创建子视图的事件
+     *
      * @method bindCreateSubview
      * @private
      */
@@ -649,22 +706,62 @@
     }
 
     tool.defaults(freeNodeGraphController, {
+        /**
+         * 自由视图js引用名称
+         *
+         * @property name
+         * @type {String}
+         * @readOnly
+         * @default freeGraph
+         */
         name : 'freeGraph',
-        //表示鼠标悬浮之上的节点ID
+
+        /**
+         * 表示鼠标悬浮之上的节点ID
+         *
+         * @property hoverNodeId
+         * @type {Number}
+         */
         hoveredNodeId : null,
-        //表示聚焦于之上的节点
+
+        /**
+         * 表示聚焦于之上的节点
+         *
+         * @property focusedNodeId
+         * @type {Number}
+         */
         focusedNodeId : null,
-        //存储当前FreeGraph的对象指针
+
+        /**
+         * 存储当前FreeGraph的对象指针
+         *
+         * @property globalReference
+         * @type {Object}
+         */
         globalReference : null,
-        //存储当前FreeGraph的数据指针
+
+        /**
+         * 存储当前FreeGraph的数据指针
+         *
+         * @property globalData
+         * @type {Object}
+         */
         globalData : null,
-        //表示当前视图的可操作性
+
+        /**
+         * 表示当前的操作模式
+         *
+         * @property operation
+         * @type {String}
+         * @default edit
+         */
         operation : 'edit'
     });
 
     tool.extend(freeNodeGraphController, {
         /**
          * 初始化freeNodeGraph界面
+         *
          * @method iniFreeGraph
          * @param {Number} id
          */
@@ -756,6 +853,7 @@
 
         /**
          * 初始化事件函数的绑定
+         *
          * @method iniFreeGraphListener
          */
         iniFreeGraphListener : function () {
@@ -778,6 +876,7 @@
 
         /**
          * 初始化freeNodeGraph的欣赏试图
+         *
          * @method freeNodeGraph
          * @param {Number} id
          */
@@ -787,6 +886,7 @@
 
         /**
          * 初始化FreeGraphCollection的一个实例，并将全局数据索引指向它
+         *
          * @method iniCollection
          * @param {number} id 主视图的ID
          */
@@ -800,6 +900,7 @@
 
         /**
          * 在没有任何节点的情况下，初始化第一个节点
+         *
          * @method iniFirstNode
          * @param {Number} id
          */
@@ -822,6 +923,7 @@
 
         /**
          * 刷新属性值模态框中的值
+         *
          * @method refreshPropertyModel
          */
         refreshPropertyModel : function () {

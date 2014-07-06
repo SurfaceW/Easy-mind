@@ -1,7 +1,8 @@
 /**
- * @instance cGraphController
- * @vision 1.0
- * @time 2014-05-22 11:18:22
+ * cGraphController
+ * 主视图的事件、逻辑控制集
+ *
+ * @since 1.0
  * @author TEAM-4
  */
 (function () {
@@ -18,25 +19,91 @@
         controller = KT.controller,
         view = KT.view,
 
-        that, //KT.controller.cGraph的引用
-
         cGraphs = KT.collection.cGraph.models,
 
-        isAdding = false, //表示是否正在添加节点的指示器
-        isHovering = false, //表示是否处于节点Hovering的指示器
-        isDoubleClick = false, //表示双击事件是否已经被激发
-        clearSingleClick = null, //单击事件Timer清零
+        /**
+         * 转换this
+         * that = KT.controller.cGraph
+         *
+         * @attribute that
+         * @private
+         */
+        that,
 
+        /**
+         * 表示是否正在添加节点的指示器
+         *
+         * @attribute isAdding
+         * @type {boolean}
+         * @private
+         */
+        isAdding = false,
+
+        /**
+         * 表示是否处于节点Hovering的指示器
+         *
+         * @attribute isHovering
+         * @type {boolean}
+         * @private
+         */
+        isHovering = false,
+
+        /**
+         * 表示双击事件是否已经被激发
+         *
+         * @attribute isDoubleClick
+         * @type {boolean}
+         * @private
+         */
+        isDoubleClick = false,
+
+        /**
+         * 单击事件Timer清零
+         *
+         * @attribute clearSingleClick
+         * @type {Object}
+         * @private
+         */
+        clearSingleClick = null,
+
+        /**
+         * 表示模态框是否被允许显示
+         *
+         * @attribute allowShowModal
+         * @type {boolean}
+         * @private
+         */
         allowShowModal = true,
 
-        isDragging = false, //存储Hover的时候，用户是否尝试拖拽
-        stopHold, //存储上面模式产生的setTimeout返回对象
+        /**
+         * 存储Hover的时候，用户是否尝试拖拽
+         *
+         * @attribute isDragging
+         * @type {boolean}
+         * @private
+         */
+        isDragging = false,
 
-        //实例化cGraph控制器
+        /**
+         * 存储上面模式产生的setTimeout返回对象
+         *
+         * @attribute stopHold
+         * @type {Object}
+         * @private
+         */
+        stopHold,
+
+        /**
+         * 实例化cGraph控制器
+         *
+         * @method cGraphController
+         */
         cGraphController = new KT.Controller();
 
     /**
      * 绑定添加按钮点击事件
+     *
+     * @event bindAddButtonEvent
      * @private
      */
     function bindAddButtonEvent() {
@@ -78,6 +145,8 @@
 
     /**
      * 绑定Hover节点事件
+     *
+     * @event bindHoverNodeEvent
      * @private
      */
     function bindHoverNodeEvent() {
@@ -141,7 +210,9 @@
     }
 
     /**
-     * 单击节点事件
+     * 绑定单击节点事件
+     *
+     * @event bindSingleClickNodeEvent
      * @private
      */
     function bindSingleClickNodeEvent() {
@@ -191,7 +262,9 @@
     }
 
     /**
-     * 双击节点事件
+     * 绑定双击节点事件
+     *
+     * @event bindDoubleClickNodeEvent
      * @private
      */
     function bindDoubleClickNodeEvent() {
@@ -215,6 +288,8 @@
 
     /**
      * 绑定拖动节点事件
+     *
+     * @event bindDragNodeEvent
      * @private
      */
     function bindDragNodeEvent() {
@@ -274,18 +349,46 @@
     }
 
     tool.defaults(cGraphController, {
+        /**
+         * 主视图js引用名称
+         *
+         * @property name
+         * @type {String}
+         * @readOnly
+         * @default cGraph
+         */
         name : 'cGraph',
-        //表示鼠标悬浮之上的节点ID
+
+        /**
+         * 表示鼠标悬浮之上的节点ID
+         *
+         * @property hoverNodeId
+         * @type {Number}
+         */
         hoveredNodeId : null,
-        //表示聚焦于之上的节点
+
+        /**
+         * 表示聚焦于之上的节点
+         *
+         * @property focusedNodeId
+         * @type {Number}
+         */
         focusedNodeId : null,
-        //表示当前的操作模式
+
+        /**
+         * 表示当前的操作模式
+         *
+         * @property operation
+         * @type {String}
+         * @default edit
+         */
         operation : 'edit'
     });
 
     tool.extend(cGraphController, {
         /**
          * 跳转到FreeGraph视图
+         *
          * @method gotoFreeGraph
          */
         gotoFreeGraph : function () {
@@ -312,8 +415,9 @@
 
         /**
          * 初始化CGraph界面以及CGraph的数据
-         * @param {Object} response 期望的参数是来自userModel的login函数传参: response[2]
+         *
          * @method iniCGraph
+         * @param {Object} response 期望的参数是来自userModel的login函数传参: response[2]
          */
         iniCGraph : function (response) {
             var i,
@@ -369,6 +473,7 @@
 
         /**
          * 执行CGraph的初始化UI/事件操作
+         *
          * @method iniCGraphOperation
          */
         iniCGraphOperation : function () {
@@ -407,6 +512,14 @@
             }, 300);
         },
 
+        /**
+         * 缩放测试用
+         * 重新绑定cGraph的hover事件
+         * 利用private使该代码块文档化时不可见
+         *
+         * @method hoverTest
+         * @for zoom
+         */
         hoverTest : function () {
             that.removeListener('mousemove.nodeHover');
             bindHoverNodeEvent();
@@ -414,6 +527,8 @@
 
         /**
          * 初始化该试图的造访者试图
+         *
+         * @method iniVisitCGraph
          */
         iniVisitCGraph : function (id) {
             this.operation = 'visit';
@@ -422,6 +537,8 @@
 
         /**
          * 点击保存按钮触发的事件
+         *
+         * @event saveMainNodeModal
          */
         saveMainNodeModal : function () {
             //获得被聚焦的Model
@@ -446,6 +563,8 @@
 
         /**
          * 刷新cGraph_modal中的值
+         *
+         * @method refreshMainNodeModal
          */
         refreshMainNodeModal : function () {
             //获得被聚焦的Model
@@ -461,6 +580,8 @@
 
         /**
          * 点击删除按钮触发的删除事件
+         *
+         * @event deleteMainNodeModal
          */
         deleteMainNodeModal : function () {
             //防止误操作

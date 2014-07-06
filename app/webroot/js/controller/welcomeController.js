@@ -1,7 +1,8 @@
 /**
- * @instance welcomeController
- * @version 1.0
- * @time 2014-05-23 11:19:45
+ * welcomeController
+ * 欢迎视图的事件、逻辑控制集
+ *
+ * @since 1.0
  * @author TEAM_4
  */
 (function () {
@@ -17,12 +18,23 @@
         view = KT.view,
         controller = KT.controller,
 
+        /**
+         * 转换this
+         * that = KT.controller.window
+         *
+         * @attribute that
+         * @private
+         */
         that,
 
-        //实例化welcome控制器
+        /**
+         * 实例化welcome控制器
+         * @method welcomeController
+         */
         welcomeController = new KT.Controller();
     /**
      * 绑定登录组件基本事件
+     *
      * @method iniListener
      * @private
      */
@@ -98,6 +110,7 @@
     tool.extend(welcomeController, {
         /**
          * 初始化欢迎界面
+         *
          * @method ini
          */
         iniWelcome: function () {
@@ -109,7 +122,9 @@
 
         /**
          * 忘记密码的请求设置
+         *
          * @method forgotPassword
+         * @param {Object} data
          */
         forgotPassword : function (data) {
             model.user.ajaxSend(URLS.forgot, data, function (response) {
@@ -132,7 +147,9 @@
 
         /**
          * 用户登录的时候，所需要进行的数据交换
+         *
          * @method login
+         * @param {Object} data
          */
         login: function (data) {
             model.user.ajaxSend(URLS.login, data, function (response) {
@@ -173,7 +190,9 @@
 
         /**
          * 用户注册的时候，所需要进行的数据交换
+         *
          * @method signUp
+         * @param {Object} data
          */
         signUp: function (data) {
             model.user.ajaxSend(URLS.signUp, data, function (response) {
@@ -194,7 +213,8 @@
 
         /**
          * 跳转到CGraph视图
-         * @method toCgraph
+         *
+         * @method toCGraph
          */
         toCGraph: function () {
             //欣赏模式
